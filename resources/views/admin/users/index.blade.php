@@ -13,7 +13,7 @@
         <th>Name</th>
         <th>E-mail</th>
         <th>Rol</th>
-        <th>Aktiflik</th>
+        <th>Statü</th>
         <th>Oluşturuldu</th>
         <th>Güncellendi</th>
       </tr>
