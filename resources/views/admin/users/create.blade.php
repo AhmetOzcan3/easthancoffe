@@ -6,6 +6,8 @@
 
 	<h1>Kullanıcı Oluştur</h1>
 
+		@include('includes.form_error')
+
 	
 		{!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store']) !!}
 	
@@ -40,8 +42,8 @@
 
 						<div class="form-group">
 							
-						{!! Form::label('password', 'Şifre:') !!}
-						{!! Form::password('password', ['class'=>'form-control']) !!}
+					{!! Form::label('password', 'Şifre:') !!}
+					{!! Form::password('password', ['class'=>'form-control']) !!}
 						
 						</div>
 
@@ -52,6 +54,6 @@
 		{!! Form::close() !!}	
 
 
-	@include('includes.form_error')
+	
 
 @stop

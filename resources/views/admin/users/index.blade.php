@@ -26,10 +26,10 @@
 
       <tr>
         <td>{{$user->id}}</td>
-        <td>{{$user->name}}</td>
+        <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
         <td>{{$user->email}}</td>
         <td>{{$user->role->name}}</td>
-        <td>{{$user->is_active == 1 ? 'Aktif' : 'Aktif'}}</td>
+        <td>{{$user->is_active == 1 ? 'Aktif' :'Aktif Değil'}}</td>
         <td>{{$user->created_at->diffForHumans()}}</td>
         <td>{{$user->updated_at->diffForHumans()}}</td>
       </tr>
