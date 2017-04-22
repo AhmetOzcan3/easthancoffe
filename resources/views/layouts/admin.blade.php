@@ -62,7 +62,7 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out fa-fw"></i>Çıkış Yap</a>
                     </li>
                 </ul>
                 <!-- /.dropdown-user -->
@@ -123,11 +123,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/users">Tüm Kullanıcılar</a>
+                                <a href="{{route('users.index')}}">Tüm Kullanıcılar</a>
                             </li>
 
                             <li>
-                                <a href="/users/create">Kullanıcı Oluştur</a>
+                                <a href="{{route('users.create')}}">Kullanıcı Oluştur</a>
                             </li>
 
                         </ul>

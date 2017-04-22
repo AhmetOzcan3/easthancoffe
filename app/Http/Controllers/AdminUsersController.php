@@ -45,8 +45,18 @@ class AdminUsersController extends Controller
      */
     public function store(UsersRequest $request)
     {
-        //
-        return $request->all();
+        //  
+       // User::create($request->all());
+
+        $input = $request->all();
+
+        $input['password'] = bcrypt($request->password);
+
+        User::create($input); 
+     //   return redirect('/admin/users');
+
+
+        //return $request->all();
     }
 
     /**

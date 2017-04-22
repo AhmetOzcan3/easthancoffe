@@ -33,8 +33,8 @@
 
 					<div class="form-group">
 						
-					{!! Form::label('status', 'Kullancı Aktivitesi:') !!}
-					{!! Form::select('status', array(1 => 'Aktif', 0=> 'Aktif Değil'), 0, ['class'=>'form-control']) !!}
+					{!! Form::label('is_active', 'Kullancı Aktivitesi:') !!}
+					{!! Form::select('is_active', array(1 => 'Aktif Kullanıcı', 0=> 'Pasif Kullanıcı'), 0, ['class'=>'form-control']) !!}
 					
 					</div>
 
