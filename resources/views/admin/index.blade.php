@@ -4,4 +4,4 @@
 
 	<h1>Yönetici</h1>
 
-	@stop
+@stop
