@@ -7,6 +7,7 @@ use App\User;
 use App\Role;
 use App\Http\Requests\UsersRequest;
 use App\Http\Requests\UsersEditRequest;
+use Illuminate\Support\Facades\Session;
 
 class AdminUsersController extends Controller
 {
@@ -138,5 +139,10 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         //
+            User::findOrFail($id)->delete();
+
+            Session::flash('deleted_user', 'Kullanıcı Silindi');
+
+            return redirect('/admin/users');
     }
 }

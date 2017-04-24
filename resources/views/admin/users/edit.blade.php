@@ -4,8 +4,15 @@
 
 @section('content')
 
-	<h1>Kullanıcıyı Düzenle</h1>
+	@if(Session::has('deleted_user'))
 
+	<p class="bg-danger">{{session('deleted_user')}}</p>
+
+	@endif
+
+
+
+	<h1>Kullanıcıyı Düzenle</h1>
 
 	@include('includes.form_error')
 
@@ -52,11 +59,29 @@
 
 					<div class="form-group">
 	
-				{!! Form::submit('Kullanıcıyı Düzenle', ['class'=>'btn btn-primary']) !!}
+				{!! Form::submit('Kullanıcıyı Düzenle', ['class'=>'btn btn-primary col-sm-6']) !!}
 		</div>
 		{!! Form::close() !!}	
 
+				{!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+			
+			
+				<div class="form-group">
+			
+						{!! Form::submit('Kullanıcıyı Sil', ['class'=>'btn btn-danger col-sm-6']) !!}
+				</div>
+				{!! Form::close() !!}	
+
 		</div>
+
+		<div class="row">
+			
+
+
+		</div>
+
+		@include('includes.form_error')
+
 
 
 

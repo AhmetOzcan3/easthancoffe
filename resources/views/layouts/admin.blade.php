@@ -138,11 +138,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>İçerik<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/posts">Tüm içerik</a>
+                                <a href="{{route('posts.index')}}">Tüm içerik</a>
                             </li>
 
                             <li>
-                                <a href="/posts/create">İçerik Oluştur</a>
+                                <a href="{{route('posts.create')}}">İçerik Oluştur</a>
                             </li>
 
                         </ul>

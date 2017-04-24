@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+//use App\Http\Middleware\Admin;
 
 class User extends Authenticatable
 {
@@ -33,5 +34,23 @@ class User extends Authenticatable
 
 
     }
+
+        public function isAdmin(){
+
+            if($this->role->name == "Yönetici" && $this->is_active == 1){
+
+                return true;
+
+            }
+
+            return false;
+
+        }
+
+        public function posts(){
+
+            return $this->hasMany('App\Post');
+
+        }
 
 }
