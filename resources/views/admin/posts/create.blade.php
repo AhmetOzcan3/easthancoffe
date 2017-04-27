@@ -9,7 +9,7 @@
 
 	</div>
 
- <h1>Yazı Oluştur</h1>
+ <h1>Yeni İçerik Oluştur</h1>
 
 
  <div class="row">
@@ -26,8 +26,8 @@
 
  		<div class="form-group">
  			
- 		{!! Form::label('category_id', 'Tür:') !!}
- 		{!! Form::select('category_id', [''=>'Tür Seç'] + $categories, null, ['class'=>'form-control']) !!}
+ 		{!! Form::label('category_id', 'Menü Bölümü:') !!}
+ 		{!! Form::select('category_id', [''=>'Bölüm Seç'] + $categories, null, ['class'=>'form-control']) !!}
  		
  		</div>
 

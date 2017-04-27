@@ -28,7 +28,7 @@
          <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" alt=""></td>
          <td>{{$post->user->name}}</td>
          <td>{{$post->category ? $post->category->name : 'Diğer'}}</td>
-         <td>{{$post->title}}</td>
+         <td><a href="{{route('posts.edit', $post->id)}}">{{$post->title}}</a></td>
          <td>{{$post->body}}</td>
          <td>{{$post->created_at->diffForHumans()}}</td>
          <td>{{$post->updated_at->diffForHumans()}}</td>
@@ -40,5 +40,18 @@
      
      </tbody>
    </table>
+
+   <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+          
+        {{$posts->render()}}
+
+
+
+        </div>
+
+
+
+   </div>
 
 @stop

@@ -24,7 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
+    @yield('styles')
 
 
 </head>
@@ -151,14 +151,10 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Kategoriler<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-wrench fa-fw"></i>Menü Bölümleri<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/categories">Tüm Kategoriler</a>
-                            </li>
-
-                            <li>
-                                <a href="/categories/create">Kategori Oluştur</a>
+                                <a href="{{route('categories.index')}}">Tüm Bölümler</a>
                             </li>
 
                         </ul>
@@ -170,11 +166,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Medya<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/media">Tüm Medya</a>
+                                <a href="{{route('media.index')}}">Tüm Medya</a>
                             </li>
 
                             <li>
-                                <a href="">Medya Yükle</a>
+                                <a href="{{route('media.create')}}">Medya Yükle</a>
                             </li>
 
                         </ul>
@@ -266,7 +262,7 @@
 <script src="{{asset('js/libs.js')}}"></script>
 
 
-@yield('footer')
+@yield('scripts')
 
 
 

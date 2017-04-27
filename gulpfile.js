@@ -22,7 +22,7 @@ elixir(function(mix) {
                 'libs/bootstrap.css',
                 'libs/font-awesome.css',
                 'libs/metisMenu.css',
-                'libs/sb-admin-2.css'
+                'libs/sb-admin-2.css',
 
 
             ], './public/css/libs.css')
@@ -39,7 +39,8 @@ elixir(function(mix) {
                 'libs/bootstrap.js',
                 'libs/metisMenu.js',
                 'libs/sb-admin-2.js',
-                'libs/scripts.js'
+                'libs/scripts.js',
+                 
 
 
 

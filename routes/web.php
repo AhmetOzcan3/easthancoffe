@@ -12,19 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage.index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
-Route::get('/admin', function(){
-
-	return view('admin.index');
 
 
-});
+
+Route::get('/admin', 'HomeController@index');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 
 Route::group(['middleware'=>'admin'], function(){
 
@@ -33,5 +33,7 @@ Route::group(['middleware'=>'admin'], function(){
 });
 
 Route::resource('admin/posts', 'AdminPostsController');	
+Route::resource('admin/categories', 'AdminCategoriesController');
+Route::resource('admin/media', 'AdminMediaController');
 
 
